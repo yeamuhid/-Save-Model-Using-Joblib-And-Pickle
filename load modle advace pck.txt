@@ -1,0 +1,7 @@
+# Load model and metadata
+try:
+    model_info = joblib.load('advanced_model_joblib.pkl')
+    loaded_model = model_info['model']
+    print(f"Loaded {model_info['model_type']} model with training accuracy of {model_info['train_accuracy']:.2f}")
+except FileNotFoundError:
+    print("Model file not found!")

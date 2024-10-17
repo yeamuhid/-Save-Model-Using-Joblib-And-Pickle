@@ -1,0 +1,3 @@
+# Load the model using pickle
+with open('model_pickle.pkl', 'rb') as f:
+    model = pickle.load(f)

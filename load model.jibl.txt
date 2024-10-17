@@ -1,0 +1,8 @@
+# Load model and metadata
+try:
+    with open('advanced_model_pickle.pkl', 'rb') as f:
+        model_info = pickle.load(f)
+        loaded_model = model_info['model']
+        print(f"Loaded {model_info['model_type']} model with training accuracy of {model_info['train_accuracy']:.2f}")
+except FileNotFoundError:
+    print("Model file not found!")

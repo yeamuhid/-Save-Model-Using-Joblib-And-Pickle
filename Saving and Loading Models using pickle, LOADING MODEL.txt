@@ -1,0 +1,6 @@
+# Load the model from the file
+with open('model_pickle.pkl', 'rb') as f:
+    loaded_model = pickle.load(f)
+
+# Use the loaded model for predictions
+predictions = loaded_model.predict(X_test)
